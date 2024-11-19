@@ -3,13 +3,13 @@ import * as Yup from "yup";
 
 const validationSchema = Yup.object({
   name: Yup.string()
-    .min(3, "Имя должно содержать минимум 3 символа")
-    .max(50, "Имя должно содержать максимум 50 символов")
-    .required("Поле имени обязательно"),
+    .min(3, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required"),
   number: Yup.string()
-    .min(3, "Номер должен содержать минимум 3 символа")
-    .max(50, "Номер должен содержать максимум 50 символов")
-    .required("Поле номера обязательно"),
+    .min(3, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required"),
 });
 
 const ContactForm = ({ onAddContact }) => {
